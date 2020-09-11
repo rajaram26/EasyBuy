@@ -1,0 +1,129 @@
+html{
+    font-size: 62.5%;
+    box-sizing: border-box;
+}
+body{
+    margin: 0;
+    font: 1.6rem Helvetica;
+    height: 100vh;
+}
+.grid-container{
+    display: grid;
+    grid-template-areas: 
+    "header"
+    "main"
+    "footer";
+    grid-template-columns: 1fr;
+    grid-template-rows: 5rem 1fr 5rem;
+    height: 100%;
+
+}
+.header{
+    grid-area: header;
+    background-color: #3BCEAC;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5rem;
+}
+.brand a{
+    color:white;
+    font-size: 2.5rem;
+    font-weight: bold;
+    text-decoration: none;
+}
+.header-links a{
+    color:white;
+    text-decoration: none;
+}
+.main{
+    grid-area: main;
+}
+.footer{
+    grid-area: footer;
+    background-color:  #3BCEAC;
+    color: white;
+    display: flex;
+    align-items: center;
+}
+.header a:hover{
+    color: #3F403F;
+}
+/* products */
+.products{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.product{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+}
+.products li{
+    list-style: none;
+    padding: 0%;
+    flex: 0 1 34rem;
+    margin: 1.6rem;
+    /* width: 80rem; */
+    height: 50rem;
+    /* border-left: .1rem #c0c0c0 solid; */
+    border-right: .1rem #c0c0c0 solid;
+    border-bottom: .1rem #c0c0c0 solid;
+}
+.product-image{
+    max-width: 34rem;
+    max-height: 34rem;
+}
+.product-name{
+    font-size: 2.5rem;
+    font-weight: bold;
+}
+.product-name a{
+    text-decoration: none;
+}
+.product-brand{
+    font-size: 1.5rem;
+    color: #808080;
+}
+.product-price{
+    font-size: 2.2rem;
+    font-weight: bold;
+}
+.product-review{
+    margin-bottom: 1rem;
+}
+/* sidebar */
+.side-btn{
+    font-size: 2.5rem;
+    color:white;
+    padding: .3rem;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+.sidebar{
+    position: fixed;
+    transform: translateX(-30rem);
+    width: 30rem;
+    background-color: #f0f0f0;
+    height: 100%;
+}
+.sidebar.open{
+    transform: translateX(0);
+}
+.sidebar a{
+    text-decoration: none;
+}
+.sidebar ul{
+    list-style: none;
+}
+.sidebar button{
+    border: none;
+    float: right;
+    margin-right: 5px;
+    margin-top: 5px;
+}
